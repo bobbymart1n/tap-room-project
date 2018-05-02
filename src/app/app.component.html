@@ -12,5 +12,12 @@
       <h3>Price: ${{selectedKeg.price}}</h3>
       <h3>Alcohol Content: {{selectedKeg.alcoholContent}}%</h3>
     </div>
+    <div>
+      <input [(ngModel)]="newName" placeholder="Name">
+      <input [(ngModel)]="newBrand" placeholder="Brand">
+      <input [(ngModel)]="newPrice" placeholder="Price">
+      <input [(ngModel)]="newAlcoholContent" placeholder="Alchol Content">
+      <button (click)="addKeg(newName, newBrand, newPrice, newAlcoholContent)">Add Keg</button>
+    </div>
   </body>
 </html>

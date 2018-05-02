@@ -16,4 +16,8 @@ export class AppComponent {
   displayKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
   }
+  addKeg(newName, newBrand, newPrice, newAlcoholContent){
+    let keg = new Keg(newName, newBrand, newPrice, newAlcoholContent);
+    this.kegs.push(keg);
+  }
 }
