@@ -2,3 +2,10 @@
   cursor: pointer;
   text-decoration: underline;
 }
+.keg {
+  padding: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

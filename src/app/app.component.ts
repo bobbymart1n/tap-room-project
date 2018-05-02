@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PintsComponent } from './pints/pints.component';
+import { NavComponent } from './nav/nav.component';
 
 @Component({
   selector: 'app-root',

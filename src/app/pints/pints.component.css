@@ -1,0 +1,10 @@
+.keg-list {
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+.high-alcohol {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}

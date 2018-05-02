@@ -14,7 +14,7 @@ export class PintsComponent implements OnInit {
     this.visible = !this.visible;
   }
   kegs: Keg[] = [
-    new Keg('RPM' ,'Boneyard', 6, 6.5, 12)
+    new Keg('RPM' ,'Boneyard', 6, 6.5, 124)
   ];
   selectedKeg = null;
   displayKeg(clickedKeg) {
@@ -38,6 +38,18 @@ export class PintsComponent implements OnInit {
   priorityColor(currentKeg){
     if(currentKeg.pints <= 10){
       return "text-danger";
+    }
+  }
+  colorCost(currentKeg) {
+    if(currentKeg.price > 5){
+      return "text-danger";
+    } else{
+      return "text-warning";
+    }
+  }
+  alcoholContentHighlight(currentKeg) {
+    if(currentKeg.alcoholContent > 6) {
+      return "high-alcohol"
     }
   }
 }
