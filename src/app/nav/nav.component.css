@@ -5,7 +5,8 @@ nav {
   align-items: center;
   padding: 15px;
   background: #FAAF19;
+  box-shadow: 0 5px 10px #222;
 }
 nav h1 {
-  margin: 0l
+  margin: 0;
 }

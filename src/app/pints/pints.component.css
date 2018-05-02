@@ -3,8 +3,23 @@
   padding: 0;
   color: white;
 }
+.keg-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .high-alcohol {
   font-size: 25px;
   font-weight: 700;
   letter-spacing: .5px;
+}
+.keg-details {
+  color: white;
+}
+.add-new-keg, .add-newer-keg {
+  background-color: #4F6D7A;
+  border: 0;
+}
+.sell-pint {
+  background-color: #FAAF19;
+  border: 0;
 }

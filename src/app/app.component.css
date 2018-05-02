@@ -1,11 +1,23 @@
-.keg-item:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.wrapper img {
+  position: relative;
+  z-index: -1;
 }
 .keg {
+  position: relative;
+  bottom: 145px;
   padding: 30px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #084C61;
+  border: 3px solid #157696;
+  border-radius: 10px;
+  margin-top: 20px;
 }
