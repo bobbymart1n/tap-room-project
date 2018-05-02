@@ -1,0 +1,3 @@
+<ul class="keg-list">
+  <li [class]="priorityColor(currentKeg)" [class]="alcoholContentHighlight(currentKeg)" (click)="displayKeg(currentKeg)" *ngFor="let currentKeg of childKegList" class="keg-item">{{currentKeg.name}} Pints Left: {{currentKeg.pints}}<button (click)="sellPint(currentKeg)" class="btn btn-success ml-3 sell-pint">Sell Pint</button></li>
+</ul>

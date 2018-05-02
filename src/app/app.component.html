@@ -5,5 +5,7 @@
   </div>
   <div class="keg">
     <app-pints></app-pints>
+    <app-keg-list [childKegList]="masterKegList"></app-keg-list>
+    <app-add-keg (sendKeg)="addKeg($event)"></app-add-keg>
   </div>
 </div>

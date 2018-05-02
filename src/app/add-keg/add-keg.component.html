@@ -1,0 +1,8 @@
+<button (click)="toggle()" class="btn btn-info mb-3 add-new-keg">Add New Keg</button>
+<div class="add-keg" *ngIf="visible">
+  <input [(ngModel)]="newName" class="form-control mb-3" placeholder="Name">
+  <input [(ngModel)]="newBrand" class="form-control mb-3" placeholder="Brand">
+  <input [(ngModel)]="newPrice" class="form-control mb-3" placeholder="Price">
+  <input [(ngModel)]="newAlcoholContent" class="form-control mb-3" placeholder="Alchol Content">
+  <button (click)="addKeg(newName, newBrand, newPrice, newAlcoholContent)" class="btn btn-info add-newer-keg">Add Keg</button>
+</div>
