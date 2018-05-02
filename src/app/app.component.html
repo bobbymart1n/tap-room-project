@@ -1,24 +1,4 @@
 <h1>Jerry's Tap House</h1>
-<ul>
-  <li (click)="displayKeg(currentKeg)" *ngFor="let currentKeg of kegs" class="keg-item">{{currentKeg.name}}</li>
-</ul>
-<div *ngIf="selectedKeg">
-  <h3>Brand: {{selectedKeg.brand}}</h3>
-  <h3>Price: ${{selectedKeg.price}}</h3>
-  <h3>Alcohol Content: {{selectedKeg.alcoholContent}}%</h3>
-  <button (click)="displayEdit(selectedKeg)" class="btn btn-success mb-3">Edit</button>
-</div>
-<div class="edit-keg" *ngIf="editKeg">
-  <input class="form-control mb-3" [(ngModel)]="selectedKeg.name">
-  <input class="form-control mb-3" [(ngModel)]="selectedKeg.brand">
-  <input class="form-control mb-3" [(ngModel)]="selectedKeg.price">
-  <input class="form-control mb-3" [(ngModel)]="selectedKeg.alcoholContent">
-</div>
-<button (click)="toggle()" class="btn btn-info mb-3">Add New Keg</button>
-<div class="add-keg" *ngIf="visible">
-  <input [(ngModel)]="newName" class="form-control mb-3" placeholder="Name">
-  <input [(ngModel)]="newBrand" class="form-control mb-3" placeholder="Brand">
-  <input [(ngModel)]="newPrice" class="form-control mb-3" placeholder="Price">
-  <input [(ngModel)]="newAlcoholContent" class="form-control mb-3" placeholder="Alchol Content">
-  <button (click)="addKeg(newName, newBrand, newPrice, newAlcoholContent)" class="btn btn-info">Add Keg</button>
+<div class="keg-fullness">
+  <app-pints></app-pints>
 </div>
