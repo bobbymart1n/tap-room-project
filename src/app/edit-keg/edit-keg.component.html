@@ -1,0 +1,7 @@
+<div class="edit-keg" *ngIf="childEdit">
+  <input class="form-control mb-3" [(ngModel)]="childEdit.name">
+  <input class="form-control mb-3" [(ngModel)]="childEdit.brand">
+  <input class="form-control mb-3" [(ngModel)]="childEdit.price">
+  <input class="form-control mb-3" [(ngModel)]="childEdit.alcoholContent">
+  <button (click)="finishedEdit()" class="btn btn-danger mb-3">Done</button>
+</div>

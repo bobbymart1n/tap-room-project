@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PintsComponent } from './pints/pints.component';
 import { NavComponent } from './nav/nav.component';
 import { Keg } from './models/keg.model';
 
@@ -11,10 +10,20 @@ import { Keg } from './models/keg.model';
 export class AppComponent {
   constructor() {}
   masterKegList: Keg[] = [
-    new Keg('RPM' ,'Boneyard', 6, 6.5, 124)
+    new Keg('RPM' ,'Boneyard', 'ipa' , 6, 6.5, 124)
   ];
   addKeg(newKeg: Keg){
     this.masterKegList.push(newKeg);
   }
-
+  selectedKeg = null;
+  displayKeg(clickedKeg) {
+    this.selectedKeg = clickedKeg;
+  }
+  selectedEdit = null;
+  displayEdit(clickedEdit){
+    this.selectedEdit = clickedEdit;
+  }
+  finishedEditing() {
+    this.selectedEdit = null;
+  }
 }

@@ -4,8 +4,9 @@
     <img src="../assets/jerry.png" alt="Good Jerry">
   </div>
   <div class="keg">
-    <app-pints></app-pints>
-    <app-keg-list [childKegList]="masterKegList"></app-keg-list>
+    <app-keg-list [childKegList]="masterKegList" (clickSender)="displayKeg($event)"></app-keg-list>
+    <app-keg-details [childKeg]="selectedKeg" (editSender)="displayEdit($event)"></app-keg-details>
+    <app-edit-keg [childEdit]="selectedEdit" (clickedDone)="finishedEditing()"></app-edit-keg>
     <app-add-keg (sendKeg)="addKeg($event)"></app-add-keg>
   </div>
 </div>

@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Keg } from './../models/keg.model';
-
 
 @Component({
   selector: 'app-keg-list',
@@ -9,6 +8,7 @@ import { Keg } from './../models/keg.model';
 })
 export class KegListComponent {
   @Input() childKegList: Keg[];
+  @Output() clickSender = new EventEmitter();
   constructor() { }
   priorityColor(currentKeg){
     if(currentKeg.pints <= 10){
@@ -20,5 +20,14 @@ export class KegListComponent {
       return "high-alcohol"
     }
   }
-
+  sellPint(currentKeg){
+    currentKeg.pints--;
+  }
+  displayKegDetails(clickedKeg) {
+    this.clickSender.emit(clickedKeg);
+  }
+  filterByStyle: string = "allStyles";
+  onChange(optionFromMenu){
+    this.filterByStyle = optionFromMenu;
+  }
 }

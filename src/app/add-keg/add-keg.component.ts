@@ -12,8 +12,8 @@ export class AddKegComponent{
   toggle() {
     this.visible = !this.visible;
   }
-  addKeg(newName, newBrand, newPrice, newAlcoholContent){
-    let keg: Keg = new Keg(newName, newBrand, newPrice, newAlcoholContent, 124);
+  addKeg(newName, newBrand, newStyle, newPrice, newAlcoholContent){
+    let keg: Keg = new Keg(newName, newBrand, newStyle, newPrice, newAlcoholContent, 124);
     this.sendKeg.emit(keg);
     this.toggle();
   }

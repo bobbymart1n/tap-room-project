@@ -1,3 +1,21 @@
+<select (change)="onChange($event.target.value)">
+  <option value="allStyles">All Styles</option>
+  <option value="ipa">IPA</option>
+  <option value="lager">Lager</option>
+  <option value="porter">Porter</option>
+  <option value="blonde">Blonde</option>
+</select>
+
+
+
 <ul class="keg-list">
-  <li [class]="priorityColor(currentKeg)" [class]="alcoholContentHighlight(currentKeg)" (click)="displayKeg(currentKeg)" *ngFor="let currentKeg of childKegList" class="keg-item">{{currentKeg.name}} Pints Left: {{currentKeg.pints}}<button (click)="sellPint(currentKeg)" class="btn btn-success ml-3 sell-pint">Sell Pint</button></li>
+  <li
+    [class]="priorityColor(currentKeg)" [class]="alcoholContentHighlight(currentKeg)"
+    *ngFor="let currentKeg of childKegList | style:filterByStyle"
+    class="keg-item mb-3">
+    <span (click)="displayKegDetails(currentKeg)">
+      {{currentKeg.name}} Pints Left: {{currentKeg.pints}}
+    </span>
+    <button (click)="sellPint(currentKeg)" class="btn btn-success ml-3 sell-pint">Sell Pint</button>
+  </li>
 </ul>
